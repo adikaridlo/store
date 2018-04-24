@@ -1,0 +1,22 @@
+    table {
+        border-collapse: collapse;
+        /*page-break-inside:avoid*/
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        padding: 3px
+    }
+    table td{
+        text-align: center;
+        /*font-size: 12px;*/
+        font-size: xx-small;
+    }
+    table th{
+        text-align: center;
+        font-size: small;
+    }
+    .row{
+        overflow: auto;
+    }
+
