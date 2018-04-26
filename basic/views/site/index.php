@@ -51,3 +51,18 @@ $this->title = 'My Yii Application';
 
     </div>
 </div>
+<script type="text/javascript">
+    window.addEventListener("load",function(){
+        var socket = io('localhost:8091');
+        socket.on('message',function(data){
+            console.log(data);
+        });
+        socket.on('sampleMessage',function(data){
+            console.log(data);
+        });
+    })
+</script>
+<?php
+
+$this->registerJsFile(Yii::getAlias('@web/js/') . 'socket.io.js',['depends'=>['app\assets\AppAsset']]);
+?>
